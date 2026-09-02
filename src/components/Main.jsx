@@ -7,17 +7,13 @@ export default function Main() {
     <li key={index}>{specification}</li>
   ));
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    const formData = new FormData(event.target);
+  function addSpecification(formData) {
     const newSpecification = formData.get("specification");
     setSpecifications((prevSpecifications) => [
       ...prevSpecifications,
       newSpecification,
     ]);
   }
-
-  console.log(specificationsListItems);
 
   return (
     <main>
@@ -27,7 +23,7 @@ export default function Main() {
         <br />
         (e.g. 16GB RAM or 1TB SSD or Intel Ultra5)
       </p>
-      <form onSubmit={handleSubmit} className="add-specification-form">
+      <form action={addSpecification} className="add-specification-form">
         <input
           type="text"
           name="specification"
