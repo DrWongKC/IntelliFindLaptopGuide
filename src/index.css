@@ -118,3 +118,15 @@ ul.specifications-list > li {
   font-size: 0.875rem;
   cursor: pointer;
 }
+
+.suggested-recommendation-container {
+  color: #475467;
+  line-height: 28px;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+.suggested-recommendation-container ul li,
+.suggested-recommendation-container ol li {
+  margin-bottom: 8px;
+}
